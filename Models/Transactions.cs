@@ -16,6 +16,7 @@ namespace ShowroomGalleryUI.Models
         public int? StaffId { get; set; }
         public decimal? Discount { get; set; }
         public decimal? SubTotal { get; set; }
+        public byte[] Receipt { get; set; }        
 
         public string FormattedTotalAmount => $"{CurrencyFormat}{TotalAmount:N}";
         public string FormattedDiscount => $"{CurrencyFormat}{Discount:N}";

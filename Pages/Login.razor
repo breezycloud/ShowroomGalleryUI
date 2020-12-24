@@ -5,6 +5,10 @@
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
 
+<br>
+<br>
+<br>
+<div class="text-center">
 <EditForm Model="@staff" OnValidSubmit="@ValidateUser">
     <div class="form-signin">
         <div class="text-center">
@@ -24,6 +28,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </div>
 </EditForm>
+</div>
 
 @if (loginFailed)
 {
@@ -34,12 +39,8 @@
 
 
 @code {
-    private Staff staff;
+    private Staff staff = new Staff();
     public bool loginFailed { get; set; } = false;
-    protected override void OnInitialized()
-    {
-        staff = new Staff();
-    }
 
     private void ValidateUser()
     {
